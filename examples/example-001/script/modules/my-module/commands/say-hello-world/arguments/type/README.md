@@ -1,0 +1,1 @@
+--type=caps or --type=lowercase (default)
