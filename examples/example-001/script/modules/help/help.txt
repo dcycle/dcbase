@@ -1,0 +1,10 @@
+
+Dcycle Metrics Engine allows you to obtain code metrics. For example, you can
+call:
+
+    /path/to/dcycle-metrics-engine/dcycle-metrics-engine.sh --source=/path/to/my/code --metrics=/path/to/metrics/folder
+
+After the above, the metrics folder will contain metrics for your code.
+
+Use "./dcycle-metrics-engine.sh" usage for more options.
+

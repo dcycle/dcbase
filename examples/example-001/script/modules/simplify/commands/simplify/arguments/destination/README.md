@@ -1,0 +1,1 @@
+--destination=/path/to/your/simplified/metrics/folder

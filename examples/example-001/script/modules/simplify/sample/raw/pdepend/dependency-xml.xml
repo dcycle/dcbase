@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies generated="2016-06-22T22:37:43" pdepend="@package_version@">
+  <package name="+global">
+    <class name="DrupalTestCase">
+      <efferent>
+        <type namespace="+global" name="Database"/>
+        <type namespace="+global" name="DatabaseConnectionNotDefinedException"/>
+        <type namespace="+reflection" name="ReflectionMethod"/>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="DrupalUnitTestCase"/>
+        <type namespace="+global" name="DrupalWebTestCase"/>
+        <type namespace="+global" name="CoderTestCase"/>
+      </afferent>
+      <file name="/repo/modules/simpletest/drupal_web_test_case.php"/>
+    </class>
+    <class name="DrupalUnitTestCase">
+      <efferent>
+        <type namespace="+global" name="DrupalTestCase"/>
+        <type namespace="+global" name="Database"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/drupal_web_test_case.php"/>
+    </class>
+    <class name="DrupalWebTestCase">
+      <efferent>
+        <type namespace="+global" name="DrupalTestCase"/>
+        <type namespace="+core" name="stdClass"/>
+        <type namespace="+global" name="Database"/>
+        <type namespace="+pdo" name="PDO"/>
+        <type namespace="+core" name="Exception"/>
+        <type namespace="+dom" name="DOMDocument"/>
+        <type namespace="+dom" name="DOMXPath"/>
+        <type namespace="+simplexml" name="SimpleXMLElement"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/drupal_web_test_case.php"/>
+    </class>
+    <class name="GELFMessage">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="GELFMessagePublisher"/>
+        <type namespace="+global" name="GelfMessageTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/gelf-php/GELFMessage.php"/>
+    </class>
+    <class name="GELFMessagePublisher">
+      <efferent>
+        <type namespace="+spl" name="InvalidArgumentException"/>
+        <type namespace="+global" name="GELFMessage"/>
+        <type namespace="+spl" name="UnexpectedValueException"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/gelf-php/GELFMessagePublisher.php"/>
+    </class>
+    <class name="GelfMessageTest">
+      <efferent>
+        <type namespace="+global" name="PHPUnit_Framework_TestCase"/>
+        <type namespace="+global" name="GELFMessage"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/gelf-php/tests/GelfMessageTest.php"/>
+    </class>
+    <class name="Stripe_Account">
+      <efferent>
+        <type namespace="+global" name="Stripe_SingletonApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_AccountTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Account.php"/>
+    </class>
+    <class name="Stripe_ApiConnectionError">
+      <efferent>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/ApiConnectionError.php"/>
+    </class>
+    <class name="Stripe_ApiError">
+      <efferent>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/ApiError.php"/>
+    </class>
+    <class name="Stripe_ApiRequestor">
+      <efferent>
+        <type namespace="+global" name="Stripe"/>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApiError"/>
+        <type namespace="+global" name="Stripe_RateLimitError"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_AuthenticationError"/>
+        <type namespace="+global" name="Stripe_CardError"/>
+        <type namespace="+core" name="Exception"/>
+        <type namespace="+global" name="Stripe_ApiConnectionError"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApplicationFee"/>
+        <type namespace="+global" name="Stripe_Card"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_Invoice"/>
+        <type namespace="+global" name="Stripe_List"/>
+        <type namespace="+global" name="Stripe_Refund"/>
+        <type namespace="+global" name="Stripe_Subscription"/>
+        <type namespace="+global" name="Stripe_Transfer"/>
+        <type namespace="+global" name="Stripe_ApiRequestorTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/ApiRequestor.php"/>
+    </class>
+    <class name="Stripe_ApiResource">
+      <efferent>
+        <type namespace="+global" name="Stripe_Object"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_Error"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_ApplicationFee"/>
+        <type namespace="+global" name="Stripe_BalanceTransaction"/>
+        <type namespace="+global" name="Stripe_Card"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+        <type namespace="+global" name="Stripe_Coupon"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_Event"/>
+        <type namespace="+global" name="Stripe_Invoice"/>
+        <type namespace="+global" name="Stripe_InvoiceItem"/>
+        <type namespace="+global" name="Stripe_Plan"/>
+        <type namespace="+global" name="Stripe_Recipient"/>
+        <type namespace="+global" name="Stripe_Refund"/>
+        <type namespace="+global" name="Stripe_SingletonApiResource"/>
+        <type namespace="+global" name="Stripe_Subscription"/>
+        <type namespace="+global" name="Stripe_Token"/>
+        <type namespace="+global" name="Stripe_Transfer"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/ApiResource.php"/>
+    </class>
+    <class name="Stripe_ApplicationFee">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApplicationFeeTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/ApplicationFee.php"/>
+    </class>
+    <class name="Stripe_AttachedObject">
+      <efferent>
+        <type namespace="+global" name="Stripe_Object"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/AttachedObject.php"/>
+    </class>
+    <class name="Stripe_AuthenticationError">
+      <efferent>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_AuthenticationErrorTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/AuthenticationError.php"/>
+    </class>
+    <class name="Stripe_Balance">
+      <efferent>
+        <type namespace="+global" name="Stripe_SingletonApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_BalanceTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Balance.php"/>
+    </class>
+    <class name="Stripe_BalanceTransaction">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_BalanceTransactionTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/BalanceTransaction.php"/>
+    </class>
+    <class name="Stripe_Card">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Card.php"/>
+    </class>
+    <class name="Stripe_CardError">
+      <efferent>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_CardErrorTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/CardError.php"/>
+    </class>
+    <class name="Stripe_Charge">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_CardErrorTest"/>
+        <type namespace="+global" name="Stripe_ChargeTest"/>
+        <type namespace="+global" name="Stripe_InvalidRequestErrorTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Charge.php"/>
+    </class>
+    <class name="Stripe_Coupon">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_CouponTest"/>
+        <type namespace="+global" name="Stripe_DiscountTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Coupon.php"/>
+    </class>
+    <class name="Stripe_Customer">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_InvoiceItem"/>
+        <type namespace="+global" name="Stripe_Invoice"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestorTest"/>
+        <type namespace="+global" name="Stripe_AuthenticationErrorTest"/>
+        <type namespace="+global" name="Stripe_CustomerTest"/>
+        <type namespace="+global" name="Stripe_DiscountTest"/>
+        <type namespace="+global" name="Stripe_InvalidRequestErrorTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Customer.php"/>
+    </class>
+    <class name="Stripe_Error">
+      <efferent>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiConnectionError"/>
+        <type namespace="+global" name="Stripe_ApiError"/>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_AuthenticationError"/>
+        <type namespace="+global" name="Stripe_CardError"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_ErrorTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Error.php"/>
+    </class>
+    <class name="Stripe_Event">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Event.php"/>
+    </class>
+    <class name="Stripe_InvalidRequestError">
+      <efferent>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_Card"/>
+        <type namespace="+global" name="Stripe_RateLimitError"/>
+        <type namespace="+global" name="Stripe_Refund"/>
+        <type namespace="+global" name="Stripe_Subscription"/>
+        <type namespace="+global" name="Stripe_InvalidRequestErrorTest"/>
+        <type namespace="+global" name="Stripe_PlanTest"/>
+        <type namespace="+global" name="Stripe_RecipientTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/InvalidRequestError.php"/>
+    </class>
+    <class name="Stripe_Invoice">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_InvoiceTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Invoice.php"/>
+    </class>
+    <class name="Stripe_InvoiceItem">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_InvoiceTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/InvoiceItem.php"/>
+    </class>
+    <class name="Stripe_List">
+      <efferent>
+        <type namespace="+global" name="Stripe_Object"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/List.php"/>
+    </class>
+    <class name="Stripe_Object">
+      <efferent>
+        <type namespace="+core" name="ArrayAccess"/>
+        <type namespace="+global" name="Stripe_Util_Set"/>
+        <type namespace="+spl" name="InvalidArgumentException"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_AttachedObject"/>
+        <type namespace="+global" name="Stripe_List"/>
+        <type namespace="+global" name="Stripe_Util"/>
+        <type namespace="+global" name="Stripe_ObjectTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Object.php"/>
+    </class>
+    <class name="Stripe_Plan">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_PlanTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Plan.php"/>
+    </class>
+    <class name="Stripe_RateLimitError">
+      <efferent>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/RateLimitError.php"/>
+    </class>
+    <class name="Stripe_Recipient">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_Transfer"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_RecipientTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_TransferTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Recipient.php"/>
+    </class>
+    <class name="Stripe_Refund">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Refund.php"/>
+    </class>
+    <class name="Stripe_SingletonApiResource">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_Account"/>
+        <type namespace="+global" name="Stripe_Balance"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/SingletonApiResource.php"/>
+    </class>
+    <class name="Stripe">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+global" name="Stripe_AuthenticationErrorTest"/>
+        <type namespace="+global" name="StripeTestCase"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Stripe.php"/>
+    </class>
+    <class name="Stripe_Subscription">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Subscription.php"/>
+    </class>
+    <class name="Stripe_Token">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_CustomerTest"/>
+        <type namespace="+global" name="Stripe_RecipientTest"/>
+        <type namespace="+global" name="Stripe_TokenTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Token.php"/>
+    </class>
+    <class name="Stripe_Transfer">
+      <efferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_Recipient"/>
+        <type namespace="+global" name="Stripe_TransferTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Transfer.php"/>
+    </class>
+    <class name="Stripe_Util">
+      <efferent>
+        <type namespace="+global" name="Stripe_Object"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_ApiResource"/>
+        <type namespace="+global" name="Stripe_Invoice"/>
+        <type namespace="+global" name="Stripe_List"/>
+        <type namespace="+global" name="Stripe_Object"/>
+        <type namespace="+global" name="Stripe_BalanceTest"/>
+        <type namespace="+global" name="Stripe_UtilTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Util.php"/>
+    </class>
+    <class name="Stripe_Util_Set">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="Stripe_Object"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/lib/Stripe/Util/Set.php"/>
+    </class>
+    <class name="Stripe_AccountTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Account"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/AccountTest.php"/>
+    </class>
+    <class name="Stripe_ApiRequestorTest">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe_ApiRequestor"/>
+        <type namespace="+reflection" name="ReflectionClass"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/ApiRequestorTest.php"/>
+    </class>
+    <class name="Stripe_ApplicationFeeTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_ApplicationFee"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/ApplicationFeeTest.php"/>
+    </class>
+    <class name="Stripe_AuthenticationErrorTest">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_AuthenticationError"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/AuthenticationErrorTest.php"/>
+    </class>
+    <class name="Stripe_BalanceTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Balance"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/BalanceTest.php"/>
+    </class>
+    <class name="Stripe_BalanceTransactionTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_BalanceTransaction"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/BalanceTransactionTest.php"/>
+    </class>
+    <class name="Stripe_CardErrorTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+        <type namespace="+global" name="Stripe_CardError"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/CardErrorTest.php"/>
+    </class>
+    <class name="Stripe_ChargeTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/ChargeTest.php"/>
+    </class>
+    <class name="Stripe_CouponTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Coupon"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/CouponTest.php"/>
+    </class>
+    <class name="Stripe_CustomerTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="IsAExpectation"/>
+        <type namespace="+global" name="Stripe_Token"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/CustomerTest.php"/>
+    </class>
+    <class name="Stripe_DiscountTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Coupon"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/DiscountTest.php"/>
+    </class>
+    <class name="Stripe_ErrorTest">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe_Error"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/Error.php"/>
+    </class>
+    <class name="Stripe_InvalidRequestErrorTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/InvalidRequestErrorTest.php"/>
+    </class>
+    <class name="Stripe_InvoiceTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_InvoiceItem"/>
+        <type namespace="+global" name="Stripe_Invoice"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/InvoiceTest.php"/>
+    </class>
+    <class name="Stripe_ObjectTest">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe_Object"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/ObjectTest.php"/>
+    </class>
+    <class name="Stripe_PlanTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Plan"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/PlanTest.php"/>
+    </class>
+    <class name="Stripe_RecipientTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Recipient"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_Token"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/RecipientTest.php"/>
+    </class>
+    <class name="Stripe_RefundTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/RefundTest.php"/>
+    </class>
+    <class name="Stripe_SubscriptionTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/SubscriptionTest.php"/>
+    </class>
+    <class name="StripeTestCase">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe"/>
+        <type namespace="+global" name="Stripe_Charge"/>
+        <type namespace="+global" name="Stripe_Customer"/>
+        <type namespace="+global" name="Stripe_Recipient"/>
+        <type namespace="+global" name="Stripe_Plan"/>
+        <type namespace="+global" name="Stripe_InvalidRequestError"/>
+        <type namespace="+global" name="Stripe_Coupon"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Stripe_AccountTest"/>
+        <type namespace="+global" name="Stripe_ApplicationFeeTest"/>
+        <type namespace="+global" name="Stripe_BalanceTest"/>
+        <type namespace="+global" name="Stripe_BalanceTransactionTest"/>
+        <type namespace="+global" name="Stripe_CardErrorTest"/>
+        <type namespace="+global" name="Stripe_ChargeTest"/>
+        <type namespace="+global" name="Stripe_CouponTest"/>
+        <type namespace="+global" name="Stripe_CustomerTest"/>
+        <type namespace="+global" name="Stripe_DiscountTest"/>
+        <type namespace="+global" name="Stripe_InvalidRequestErrorTest"/>
+        <type namespace="+global" name="Stripe_InvoiceTest"/>
+        <type namespace="+global" name="Stripe_PlanTest"/>
+        <type namespace="+global" name="Stripe_RecipientTest"/>
+        <type namespace="+global" name="Stripe_RefundTest"/>
+        <type namespace="+global" name="Stripe_SubscriptionTest"/>
+        <type namespace="+global" name="Stripe_TransferTest"/>
+        <type namespace="+global" name="Stripe_UtilTest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/TestCase.php"/>
+    </class>
+    <class name="Stripe_TokenTest">
+      <efferent>
+        <type namespace="+global" name="UnitTestCase"/>
+        <type namespace="+global" name="Stripe_Token"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/Token.php"/>
+    </class>
+    <class name="Stripe_TransferTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Transfer"/>
+        <type namespace="+global" name="IsAExpectation"/>
+        <type namespace="+global" name="Stripe_Recipient"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/TransferTest.php"/>
+    </class>
+    <class name="Stripe_UtilTest">
+      <efferent>
+        <type namespace="+global" name="StripeTestCase"/>
+        <type namespace="+global" name="Stripe_Util"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/stripe-php/test/Stripe/UtilTest.php"/>
+    </class>
+    <class name="Bar">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </class>
+    <class name="FooBar">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </class>
+    <class name="FunctionTest">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </class>
+    <interface name="startsLowerInterface">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </interface>
+    <class name="Uses_UnderScores">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </class>
+    <class name="FooBar2">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </class>
+    <interface name="notA_GoodInterfaceName">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/bad.php"/>
+    </interface>
+    <class name="Bar">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/good.php"/>
+    </class>
+    <class name="MyException">
+      <efferent>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/good.php"/>
+    </class>
+    <class name="MyExampleLog">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/good.php"/>
+    </class>
+    <interface name="MyWellNamedInterface">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/good.php"/>
+    </interface>
+    <class name="Foo">
+      <efferent>
+        <type namespace="+global" name="FooInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Test/good.php"/>
+    </class>
+    <class name="CoderTestCase">
+      <efferent>
+        <type namespace="+global" name="DrupalTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/scripts/coder_format/tests/CoderTestCase.php"/>
+    </class>
+    <class name="CoderTestFile">
+      <efferent>
+        <type namespace="+global" name="SimpleExpectation"/>
+        <type namespace="+global" name="Text_Diff"/>
+        <type namespace="+global" name="Text_Diff_Renderer_parallel"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/scripts/coder_format/tests/CoderTestFile.php"/>
+    </class>
+    <class name="Text_Diff_Renderer_parallel">
+      <efferent>
+        <type namespace="+global" name="Text_Diff_Renderer"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="CoderTestFile"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/scripts/coder_format/tests/CoderTestFile.php"/>
+    </class>
+    <class name="config_builder_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/config_builder/config_builder_ui/plugins/export_ui/config_builder_ui.class.php"/>
+    </class>
+    <class name="context_export_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/context/context_ui/export_ui/context_export_ui.class.php"/>
+    </class>
+    <class name="ctools_access_ruleset_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/ctools/ctools_access_ruleset/plugins/export_ui/ctools_access_ruleset_ui.class.php"/>
+    </class>
+    <class name="ctools_custom_content_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/ctools/ctools_custom_content/plugins/export_ui/ctools_custom_content_ui.class.php"/>
+    </class>
+    <class name="ctools_export_ui">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="config_builder_ui"/>
+        <type namespace="+global" name="context_export_ui"/>
+        <type namespace="+global" name="ctools_access_ruleset_ui"/>
+        <type namespace="+global" name="ctools_custom_content_ui"/>
+        <type namespace="+global" name="stylizer_ui"/>
+        <type namespace="+global" name="current_search_export_ui"/>
+        <type namespace="+global" name="media_oembed_provider_ui"/>
+        <type namespace="+global" name="panels_mini_ui"/>
+        <type namespace="+global" name="panels_layouts_ui"/>
+        <type namespace="+global" name="services_ctools_export_ui"/>
+        <type namespace="+global" name="views_ui"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/ctools/plugins/export_ui/ctools_export_ui.class.php"/>
+    </class>
+    <class name="stylizer_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/ctools/stylizer/plugins/export_ui/stylizer_ui.class.php"/>
+    </class>
+    <class name="ctoolsCachedPluginArray">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="ctoolsCachedPluginArray2"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/ctools/tests/plugins/cached/ctoolsCachedPluginArray.class.php"/>
+    </class>
+    <class name="ctoolsCachedPluginArray2">
+      <efferent>
+        <type namespace="+global" name="ctoolsCachedPluginArray"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/ctools/tests/plugins/cached/ctoolsCachedPluginArray2.class.php"/>
+    </class>
+    <class name="ctoolsNotCachedPluginArray">
+      <efferent>
+        <type namespace="+global" name="ctoolsNotCachedPluginArray2"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/ctools/tests/plugins/not_cached/ctoolsNotCachedPluginArray.class.php"/>
+    </class>
+    <class name="ctoolsNotCachedPluginArray2">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="ctoolsNotCachedPluginArray"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/ctools/tests/plugins/not_cached/ctoolsNotCachedPluginArray2.class.php"/>
+    </class>
+    <class name="develCase">
+      <efferent>
+        <type namespace="+global" name="Drush_CommandTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/devel/develDrushTest.php"/>
+    </class>
+    <class name="_DiffOp">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="_DiffOp_Copy"/>
+        <type namespace="+global" name="_DiffOp_Delete"/>
+        <type namespace="+global" name="_DiffOp_Add"/>
+        <type namespace="+global" name="_DiffOp_Change"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_DiffOp_Copy">
+      <efferent>
+        <type namespace="+global" name="_DiffOp"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="_DiffEngine"/>
+        <type namespace="+global" name="DiffFormatter"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_DiffOp_Delete">
+      <efferent>
+        <type namespace="+global" name="_DiffOp"/>
+        <type namespace="+global" name="_DiffOp_Add"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="_DiffOp_Add"/>
+        <type namespace="+global" name="_DiffEngine"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_DiffOp_Add">
+      <efferent>
+        <type namespace="+global" name="_DiffOp"/>
+        <type namespace="+global" name="_DiffOp_Delete"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="_DiffOp_Delete"/>
+        <type namespace="+global" name="_DiffEngine"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_DiffOp_Change">
+      <efferent>
+        <type namespace="+global" name="_DiffOp"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="_DiffEngine"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_DiffEngine">
+      <efferent>
+        <type namespace="+global" name="_DiffOp_Copy"/>
+        <type namespace="+global" name="_DiffOp_Change"/>
+        <type namespace="+global" name="_DiffOp_Delete"/>
+        <type namespace="+global" name="_DiffOp_Add"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="Diff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="Diff">
+      <efferent>
+        <type namespace="+global" name="_DiffEngine"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="MappedDiff"/>
+        <type namespace="+global" name="DrupalDiffInline"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="MappedDiff">
+      <efferent>
+        <type namespace="+global" name="Diff"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="WordLevelDiff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="DiffFormatter">
+      <efferent>
+        <type namespace="+global" name="_DiffOp_Copy"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="DrupalDiffFormatter"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="_HWLDF_WordAccumulator">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="WordLevelDiff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="WordLevelDiff">
+      <efferent>
+        <type namespace="+global" name="MappedDiff"/>
+        <type namespace="+global" name="_HWLDF_WordAccumulator"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="DrupalDiffFormatter"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="DrupalDiffFormatter">
+      <efferent>
+        <type namespace="+global" name="DiffFormatter"/>
+        <type namespace="+global" name="WordLevelDiff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="DrupalDiffInline">
+      <efferent>
+        <type namespace="+global" name="Diff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/diff/DiffEngine.php"/>
+    </class>
+    <class name="entity_views_example_query">
+      <efferent>
+        <type namespace="+global" name="views_plugin_query"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entity/views/entity_views_example_query.php"/>
+    </class>
+    <class name="EntityReferenceFieldBehaviorExample">
+      <efferent>
+        <type namespace="+global" name="EntityReference_BehaviorHandler_Abstract"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/examples/entityreference_behavior_example/plugins/behavior/EntityReferenceFieldBehaviorExample.class.php"/>
+    </class>
+    <class name="EntityReferenceInstanceBehaviorExample">
+      <efferent>
+        <type namespace="+global" name="EntityReference_BehaviorHandler_Abstract"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/examples/entityreference_behavior_example/plugins/behavior/EntityReferenceInstanceBehaviorExample.class.php"/>
+    </class>
+    <class name="EntityReferenceBehavior_TaxonomyIndex">
+      <efferent>
+        <type namespace="+global" name="EntityReference_BehaviorHandler_Abstract"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/behavior/EntityReferenceBehavior_TaxonomyIndex.class.php"/>
+    </class>
+    <class name="EntityReferenceBehavior_ViewsFilterSelect">
+      <efferent>
+        <type namespace="+global" name="EntityReference_BehaviorHandler_Abstract"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/behavior/EntityReferenceBehavior_ViewsFilterSelect.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler"/>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Broken"/>
+        <type namespace="+global" name="EntityFieldQuery"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic_node"/>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic_user"/>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic_comment"/>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic_file"/>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic_taxonomy_term"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic_node">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic_user">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+        <type namespace="+global" name="Database"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic_comment">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic_file">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Generic_taxonomy_term">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler_Generic"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Generic.class.php"/>
+    </class>
+    <class name="EntityReference_SelectionHandler_Views">
+      <efferent>
+        <type namespace="+global" name="EntityReference_SelectionHandler"/>
+        <type namespace="+global" name="SelectQueryInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/entityreference/plugins/selection/EntityReference_SelectionHandler_Views.class.php"/>
+    </class>
+    <class name="current_search_export_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/facetapi/contrib/current_search/plugins/export_ui/current_search_export_ui.class.php"/>
+    </class>
+    <class name="PanelizerEntityFile">
+      <efferent>
+        <type namespace="+global" name="PanelizerEntityDefault"/>
+        <type namespace="+core" name="stdClass"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/file_entity/plugins/entity/PanelizerEntityFile.class.php"/>
+    </class>
+    <class name="media_oembed_provider_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/media_oembed/plugins/export_ui/media_oembed_provider_ui.class.php"/>
+    </class>
+    <class name="OAuthException">
+      <efferent>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="OAuthRequest"/>
+        <type namespace="+global" name="OAuthServer"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthConsumer">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthToken">
+      <efferent>
+        <type namespace="+global" name="OAuthUtil"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="OAuthServer"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthSignatureMethod">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="OAuthSignatureMethod_HMAC_SHA1"/>
+        <type namespace="+global" name="OAuthSignatureMethod_PLAINTEXT"/>
+        <type namespace="+global" name="OAuthSignatureMethod_RSA_SHA1"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthSignatureMethod_HMAC_SHA1">
+      <efferent>
+        <type namespace="+global" name="OAuthSignatureMethod"/>
+        <type namespace="+global" name="OAuthUtil"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthSignatureMethod_PLAINTEXT">
+      <efferent>
+        <type namespace="+global" name="OAuthSignatureMethod"/>
+        <type namespace="+global" name="OAuthUtil"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthSignatureMethod_RSA_SHA1">
+      <efferent>
+        <type namespace="+global" name="OAuthSignatureMethod"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthRequest">
+      <efferent>
+        <type namespace="+global" name="OAuthUtil"/>
+        <type namespace="+global" name="OAuthException"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="OAuthServer"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthServer">
+      <efferent>
+        <type namespace="+global" name="OAuthException"/>
+        <type namespace="+global" name="OAuthRequest"/>
+        <type namespace="+global" name="OAuthToken"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthDataStore">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="OAuthUtil">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="OAuthToken"/>
+        <type namespace="+global" name="OAuthSignatureMethod_HMAC_SHA1"/>
+        <type namespace="+global" name="OAuthSignatureMethod_PLAINTEXT"/>
+        <type namespace="+global" name="OAuthRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/oauth/lib/OAuth.php"/>
+    </class>
+    <class name="panels_renderer_ipe">
+      <efferent>
+        <type namespace="+global" name="panels_renderer_editor"/>
+        <type namespace="+core" name="stdClass"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/panels/panels_ipe/plugins/display_renderers/panels_renderer_ipe.class.php"/>
+    </class>
+    <class name="panels_mini_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/panels/panels_mini/plugins/export_ui/panels_mini_ui.class.php"/>
+    </class>
+    <class name="panels_renderer_editor">
+      <efferent>
+        <type namespace="+global" name="panels_renderer_standard"/>
+        <type namespace="+core" name="stdClass"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="panels_renderer_ipe"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/panels/plugins/display_renderers/panels_renderer_editor.class.php"/>
+    </class>
+    <class name="panels_renderer_simple">
+      <efferent>
+        <type namespace="+global" name="panels_renderer_standard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/panels/plugins/display_renderers/panels_renderer_simple.class.php"/>
+    </class>
+    <class name="panels_renderer_standard">
+      <efferent>
+        <type namespace="+global" name="panels_cache_object"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="panels_renderer_editor"/>
+        <type namespace="+global" name="panels_renderer_simple"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/panels/plugins/display_renderers/panels_renderer_standard.class.php"/>
+    </class>
+    <class name="panels_layouts_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+        <type namespace="+core" name="stdClass"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/panels/plugins/export_ui/panels_layouts_ui.class.php"/>
+    </class>
+    <class name="SearchApiFacetapiExampleService">
+      <efferent>
+        <type namespace="+global" name="SearchApiAbstractService"/>
+        <type namespace="+global" name="SearchApiQueryInterface"/>
+        <type namespace="+global" name="SuperCoolAiSearch"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/search_api/contrib/search_api_facetapi/example_service.php"/>
+    </class>
+    <class name="services_ctools_export_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/services/plugins/export_ui/services_ctools_export_ui.class.php"/>
+    </class>
+    <class name="Mimeparse">
+      <efferent>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/services/servers/rest_server/lib/mimeparse.php"/>
+    </class>
+    <class name="views_ui">
+      <efferent>
+        <type namespace="+global" name="ctools_export_ui"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/export_ui/views_ui.class.php"/>
+    </class>
+    <interface name="ViewsWizardInterface">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_base_views_wizard.class.php"/>
+    </interface>
+    <class name="ViewsWizardException">
+      <efferent>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_base_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiBaseViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsWizardInterface"/>
+        <type namespace="+global" name="view"/>
+        <type namespace="+global" name="ViewsWizardException"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="ViewsUiCommentViewsWizard"/>
+        <type namespace="+global" name="ViewsUiFileManagedViewsWizard"/>
+        <type namespace="+global" name="ViewsUiNodeViewsWizard"/>
+        <type namespace="+global" name="ViewsUiTaxonomyTermViewsWizard"/>
+        <type namespace="+global" name="ViewsUiUsersViewsWizard"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_base_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiCommentViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_comment_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiFileManagedViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_file_managed_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiNodeRevisionViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiNodeViewsWizard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_node_revision_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiNodeViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="ViewsUiNodeRevisionViewsWizard"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_node_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiTaxonomyTermViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_taxonomy_term_views_wizard.class.php"/>
+    </class>
+    <class name="ViewsUiUsersViewsWizard">
+      <efferent>
+        <type namespace="+global" name="ViewsUiBaseViewsWizard"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_users_views_wizard.class.php"/>
+    </class>
+    <class name="LFPMyCertsCertificationPreprocessor">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="LFPMyCertsCertificationPreprocessorMock"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/LFPMyCertsCertificationPreprocessor.php"/>
+    </class>
+    <class name="LFPMyCertsExamInformationPreprocessor">
+      <efferent>
+        <type namespace="+date" name="DateTime"/>
+        <type namespace="+date" name="DateTimeZone"/>
+        <type namespace="+global" name="LFPMyCertsExamPrepChecklistPreprocessor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="LFPMyCertsExamInformationPreprocessorMock"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/LFPMyCertsExamInformationPreprocessor.php"/>
+    </class>
+    <class name="LFPMyCertsExamPrepChecklistPreprocessor">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="LFPMyCertsExamInformationPreprocessor"/>
+        <type namespace="+global" name="LFPMyCertsExamPrepChecklistPreprocessorMock"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/LFPMyCertsExamPrepChecklistPreprocessor.php"/>
+    </class>
+    <class name="LFPMyCertsExamPreprocessor">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="LFPMyCertsExamPreprocessorMock"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/LFPMyCertsExamPreprocessor.php"/>
+    </class>
+    <class name="LFPMyCertsCertificationPreprocessorMock">
+      <efferent>
+        <type namespace="+global" name="LFPMyCertsCertificationPreprocessor"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/mocks/LFPMyCertsCertificationPreprocessorMock.php"/>
+    </class>
+    <class name="LFPMyCertsExamInformationPreprocessorMock">
+      <efferent>
+        <type namespace="+global" name="LFPMyCertsExamInformationPreprocessor"/>
+        <type namespace="+global" name="LFPMyCertsExamPrepChecklistPreprocessorMock"/>
+        <type namespace="+global" name="LFPMyCertsOutputPreprocessorMock"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/mocks/LFPMyCertsExamInformationPreprocessorMock.php"/>
+    </class>
+    <class name="LFPMyCertsExamPrepChecklistPreprocessorMock">
+      <efferent>
+        <type namespace="+global" name="LFPMyCertsExamPrepChecklistPreprocessor"/>
+      </efferent>
+      <afferent>
+        <type namespace="+global" name="LFPMyCertsExamInformationPreprocessorMock"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/mocks/LFPMyCertsExamPrepChecklistPreprocessorMock.php"/>
+    </class>
+    <class name="LFPMyCertsExamPreprocessorMock">
+      <efferent>
+        <type namespace="+global" name="LFPMyCertsExamPreprocessor"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/custom/lfp_mycerts/includes/mocks/LFPMyCertsExamPreprocessorMock.php"/>
+    </class>
+    <class name="Entry">
+      <efferent/>
+      <afferent>
+        <type namespace="+global" name="Generator"/>
+      </afferent>
+      <file name="/repo/sites/all/themes/lftraining/grunt/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/url/node_modules/punycode/vendor/docdown/src/DocDown/Entry.php"/>
+    </class>
+    <class name="Generator">
+      <efferent>
+        <type namespace="+global" name="Entry"/>
+        <type namespace="+core" name="Generator"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/themes/lftraining/grunt/node_modules/grunt-browser-sync/node_modules/browser-sync/node_modules/url/node_modules/punycode/vendor/docdown/src/DocDown/Generator.php"/>
+    </class>
+  </package>
+  <package name="Drupal\simpletest\Tests">
+    <class name="PSR0WebTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/lib/Drupal/simpletest/Tests/PSR0WebTest.php"/>
+    </class>
+    <class name="PSR4WebTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/src/Tests/PSR4WebTest.php"/>
+    </class>
+  </package>
+  <package name="Drupal\psr_0_test\Tests">
+    <class name="ExampleTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/ExampleTest.php"/>
+    </class>
+  </package>
+  <package name="Drupal\psr_0_test\Tests\Nested">
+    <class name="NestedExampleTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/tests/psr_0_test/lib/Drupal/psr_0_test/Tests/Nested/NestedExampleTest.php"/>
+    </class>
+  </package>
+  <package name="Drupal\psr_4_test\Tests">
+    <class name="ExampleTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/tests/psr_4_test/src/Tests/ExampleTest.php"/>
+    </class>
+  </package>
+  <package name="Drupal\psr_4_test\Tests\Nested">
+    <class name="NestedExampleTest">
+      <efferent>
+        <type namespace="" name="DrupalWebTestCase"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/modules/simpletest/tests/psr_4_test/src/Tests/Nested/NestedExampleTest.php"/>
+    </class>
+  </package>
+  <package name="PhpCAS">
+    <class name="phpCAS">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_GracefullTerminationException"/>
+        <type namespace="+global" name="CAS_PGTStorage"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Interface"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_AuthenticationException"/>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_CookieJar"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_AbstractStorage"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_Db"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_File"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_AllowedList"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Any"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS.php"/>
+    </class>
+    <class name="CAS_AuthenticationException">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+spl" name="RuntimeException"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/AuthenticationException.php"/>
+    </class>
+    <class name="CAS_Client">
+      <efferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_CookieJar"/>
+        <type namespace="PhpCAS" name="CAS_GracefullTerminationException"/>
+        <type namespace="PhpCAS" name="CAS_AuthenticationException"/>
+        <type namespace="+dom" name="DOMDocument"/>
+        <type namespace="+dom" name="DOMXPath"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_AbstractStorage"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_Db"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_File"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Testable"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Exception"/>
+        <type namespace="PhpCAS" name="CAS_ProxyTicketException"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_AllowedList"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Testable"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Client.php"/>
+    </class>
+    <class name="CAS_CookieJar">
+      <efferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/CookieJar.php"/>
+    </class>
+    <interface name="CAS_Exception">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_AuthenticationException"/>
+        <type namespace="PhpCAS" name="CAS_GracefullTerminationException"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Exception"/>
+        <type namespace="PhpCAS" name="CAS_ProxyTicketException"/>
+        <type namespace="PhpCAS" name="CAS_Request_Exception"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Exception.php"/>
+    </interface>
+    <class name="CAS_GracefullTerminationException">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+spl" name="RuntimeException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/GracefullTerminationException.php"/>
+    </class>
+    <class name="CAS_InvalidArgumentException">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+spl" name="InvalidArgumentException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_CookieJar"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlMultiRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/InvalidArgumentException.php"/>
+    </class>
+    <class name="CAS_Languages_Catalan">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/Catalan.php"/>
+    </class>
+    <class name="CAS_Languages_English">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/English.php"/>
+    </class>
+    <class name="CAS_Languages_French">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/French.php"/>
+    </class>
+    <class name="CAS_Languages_German">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/German.php"/>
+    </class>
+    <class name="CAS_Languages_Greek">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/Greek.php"/>
+    </class>
+    <class name="CAS_Languages_Japanese">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/Japanese.php"/>
+    </class>
+    <interface name="CAS_Languages_LanguageInterface">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_Languages_Catalan"/>
+        <type namespace="PhpCAS" name="CAS_Languages_English"/>
+        <type namespace="PhpCAS" name="CAS_Languages_French"/>
+        <type namespace="PhpCAS" name="CAS_Languages_German"/>
+        <type namespace="PhpCAS" name="CAS_Languages_Greek"/>
+        <type namespace="PhpCAS" name="CAS_Languages_Japanese"/>
+        <type namespace="PhpCAS" name="CAS_Languages_Spanish"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/LanguageInterface.php"/>
+    </interface>
+    <class name="CAS_Languages_Spanish">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Languages_LanguageInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Languages/Spanish.php"/>
+    </class>
+    <class name="CAS_OutOfSequenceException">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+spl" name="BadMethodCallException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Post"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+        <type namespace="PhpCAS" name="CAS_Request_AbstractRequest"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlMultiRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/OutOfSequenceException.php"/>
+    </class>
+    <class name="CAS_PGTStorage_AbstractStorage">
+      <efferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_Db"/>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_File"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/PGTStorage/AbstractStorage.php"/>
+    </class>
+    <class name="CAS_PGTStorage_Db">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_AbstractStorage"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="+pdo" name="PDO"/>
+        <type namespace="+pdo" name="PDOException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/PGTStorage/Db.php"/>
+    </class>
+    <class name="CAS_PGTStorage_File">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_PGTStorage_AbstractStorage"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/PGTStorage/File.php"/>
+    </class>
+    <interface name="CAS_ProxiedService">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService.php"/>
+    </interface>
+    <class name="CAS_ProxiedService_Abstract">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Testable"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Abstract.php"/>
+    </class>
+    <class name="CAS_ProxiedService_Exception">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Post"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Imap"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Exception.php"/>
+    </class>
+    <interface name="CAS_ProxiedService_Http">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Http.php"/>
+    </interface>
+    <class name="CAS_ProxiedService_Http_Abstract">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_CookieJar"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Exception"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Get"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Post"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Http/Abstract.php"/>
+    </class>
+    <class name="CAS_ProxiedService_Http_Get">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Http/Get.php"/>
+    </class>
+    <class name="CAS_ProxiedService_Http_Post">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Exception"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Http/Post.php"/>
+    </class>
+    <class name="CAS_ProxiedService_Imap">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Exception"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Imap.php"/>
+    </class>
+    <interface name="CAS_ProxiedService_Testable">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Abstract"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxiedService/Testable.php"/>
+    </interface>
+    <class name="CAS_ProxyChain">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Interface"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Trusted"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyChain.php"/>
+    </class>
+    <class name="CAS_ProxyChain_AllowedList">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Interface"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyChain/AllowedList.php"/>
+    </class>
+    <class name="CAS_ProxyChain_Any">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Interface"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyChain/Any.php"/>
+    </class>
+    <interface name="CAS_ProxyChain_Interface">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="phpCAS"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_AllowedList"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Any"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Trusted"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyChain/Interface.php"/>
+    </interface>
+    <class name="CAS_ProxyChain_Trusted">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_ProxyChain_Interface"/>
+        <type namespace="PhpCAS" name="CAS_ProxyChain"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyChain/Trusted.php"/>
+    </class>
+    <class name="CAS_ProxyTicketException">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+spl" name="BadMethodCallException"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/ProxyTicketException.php"/>
+    </class>
+    <class name="CAS_Request_AbstractRequest">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_Request_Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Request_CurlRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/AbstractRequest.php"/>
+    </class>
+    <class name="CAS_Request_CurlMultiRequest">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Request_MultiRequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_OutOfSequenceException"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlRequest"/>
+        <type namespace="PhpCAS" name="CAS_InvalidArgumentException"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/CurlMultiRequest.php"/>
+    </class>
+    <class name="CAS_Request_CurlRequest">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+        <type namespace="PhpCAS" name="CAS_Request_AbstractRequest"/>
+        <type namespace="PhpCAS" name="phpCAS"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Request_CurlMultiRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/CurlRequest.php"/>
+    </class>
+    <class name="CAS_Request_Exception">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Exception"/>
+        <type namespace="+core" name="Exception"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Request_AbstractRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/Exception.php"/>
+    </class>
+    <interface name="CAS_Request_MultiRequestInterface">
+      <efferent>
+        <type namespace="PhpCAS" name="CAS_Request_RequestInterface"/>
+      </efferent>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Request_CurlMultiRequest"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/MultiRequestInterface.php"/>
+    </interface>
+    <interface name="CAS_Request_RequestInterface">
+      <efferent/>
+      <afferent>
+        <type namespace="PhpCAS" name="CAS_Client"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Abstract"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Get"/>
+        <type namespace="PhpCAS" name="CAS_ProxiedService_Http_Post"/>
+        <type namespace="PhpCAS" name="CAS_Request_AbstractRequest"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlMultiRequest"/>
+        <type namespace="PhpCAS" name="CAS_Request_CurlRequest"/>
+        <type namespace="PhpCAS" name="CAS_Request_MultiRequestInterface"/>
+      </afferent>
+      <file name="/repo/sites/all/libraries/CAS/CAS/Request/RequestInterface.php"/>
+    </interface>
+  </package>
+  <package name="PHP_CodeSniffer">
+    <class name="Drupal_CommentParser_FunctionCommentParser">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_CommentParser_FunctionCommentParser"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_CommentParser_ParameterElement"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_CommentParser_ReturnElement"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Commenting_FunctionCommentSniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/CommentParser/FunctionCommentParser.php"/>
+    </class>
+    <class name="Drupal_CommentParser_ParameterElement">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_CommentParser_ParameterElement"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_CommentParser_FunctionCommentParser"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/CommentParser/ParameterElement.php"/>
+    </class>
+    <class name="Drupal_CommentParser_ReturnElement">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_CommentParser_PairElement"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_CommentParser_FunctionCommentParser"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/CommentParser/ReturnElement.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Array_ArraySniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Array/ArraySniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_CSS_ClassDefinitionClosingBraceSpaceSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/CSS/ClassDefinitionClosingBraceSpaceSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_CSS_ClassDefinitionNameSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/CSS/ClassDefinitionNameSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_CSS_ClassDefinitionOpeningBraceSpaceSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/CSS/ClassDefinitionOpeningBraceSpaceSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_CSS_ColourDefinitionSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/CSS/ColourDefinitionSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_CSS_IndentationSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/CSS/IndentationSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Classes_ClassCreateInstanceSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Classes/ClassCreateInstanceSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Classes_ClassDeclarationSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Classes/ClassDeclarationSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Classes_InterfaceNameSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Classes/InterfaceNameSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Commenting_DocCommentAlignmentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Commenting/DocCommentAlignmentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Commenting_FileCommentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Commenting/FileCommentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Commenting_FunctionCommentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_CommentParser_FunctionCommentParser"/>
+        <type namespace="+global" name="PHP_CodeSniffer_CommentParser_ParserException"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Commenting/FunctionCommentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Commenting_InlineCommentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Commenting/InlineCommentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_ControlStructures_ControlSignatureSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Standards_AbstractPatternSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/ControlStructures/ControlSignatureSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_ControlStructures_ElseCatchNewlineSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/ControlStructures/ElseCatchNewlineSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_ControlStructures_ElseIfSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/ControlStructures/ElseIfSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_ControlStructures_InlineControlStructureSniff">
+      <efferent>
+        <type namespace="+global" name="Generic_Sniffs_ControlStructures_InlineControlStructureSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/ControlStructures/InlineControlStructureSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_ControlStructures_TemplateControlStructureSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/ControlStructures/TemplateControlStructureSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Files_LineLengthSniff">
+      <efferent>
+        <type namespace="+global" name="Generic_Sniffs_Files_LineLengthSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Strings_UnnecessaryStringConcatSniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Files/LineLengthSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Files_TxtFileLineLengthSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Files/TxtFileLineLengthSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Formatting_DisallowCloseTagSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Formatting/DisallowCloseTagSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Formatting_MultiLineAssignmentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Formatting/MultiLineAssignmentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Formatting_SpaceInlineIfSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="Squiz_Sniffs_WhiteSpace_OperatorSpacingSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Formatting/SpaceInlineIfSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Formatting_SpaceUnaryOperatorSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Formatting/SpaceUnaryOperatorSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Functions_DiscouragedFunctionsSniff">
+      <efferent>
+        <type namespace="+global" name="Generic_Sniffs_PHP_ForbiddenFunctionsSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Functions/DiscouragedFunctionsSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Functions_FunctionDeclarationSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Functions/FunctionDeclarationSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_InfoFiles_ClassFilesSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_InfoFiles_RequiredSniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/InfoFiles/ClassFilesSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_InfoFiles_RequiredSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_InfoFiles_ClassFilesSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/InfoFiles/RequiredSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_NamingConventions_KeywordLowerCaseSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/NamingConventions/KeywordLowerCaseSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_NamingConventions_ValidClassNameSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/NamingConventions/ValidClassNameSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_NamingConventions_ValidFunctionNameSniff">
+      <efferent>
+        <type namespace="+global" name="PEAR_Sniffs_NamingConventions_ValidFunctionNameSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/NamingConventions/ValidFunctionNameSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_NamingConventions_ValidGlobalSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/NamingConventions/ValidGlobalSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_NamingConventions_ValidVariableNameSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Standards_AbstractVariableSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/NamingConventions/ValidVariableNameSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_BrSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/BrSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_ConstantNameSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/ConstantNameSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_EmptyInstallSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionDefinition"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/EmptyInstallSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionAliasSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionAliasSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionCall">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_ConstantNameSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionAliasSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionTSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionWatchdogSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_LStringTranslatableSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_PregSecuritySniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionCall.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionCallSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_ConstantNameSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionAliasSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionTSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionWatchdogSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_LStringTranslatableSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_PregSecuritySniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionCallSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionDefinition">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_EmptyInstallSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_InstallHooksSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_InstallTSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_TInHookMenuSniff"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_TInHookSchemaSniff"/>
+      </afferent>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionDefinition.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionTSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionTSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_FunctionWatchdogSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/FunctionWatchdogSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_InstallHooksSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionDefinition"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/InstallHooksSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_InstallTSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionDefinition"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/InstallTSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_LStringTranslatableSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/LStringTranslatableSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_PregSecuritySniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCall"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionCallSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/PregSecuritySniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_RemoteAddressSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/RemoteAddressSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_TInHookMenuSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionDefinition"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/TInHookMenuSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Semantics_TInHookSchemaSniff">
+      <efferent>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Semantics_FunctionDefinition"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Semantics/TInHookSchemaSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Strings_ConcatenationSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Strings/ConcatenationSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_Strings_UnnecessaryStringConcatSniff">
+      <efferent>
+        <type namespace="+global" name="Generic_Sniffs_Strings_UnnecessaryStringConcatSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+        <type namespace="PHP_CodeSniffer" name="Drupal_Sniffs_Files_LineLengthSniff"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/Strings/UnnecessaryStringConcatSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_CloseBracketSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/CloseBracketSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_EmptyLinesSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/EmptyLinesSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_FileEndSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/FileEndSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_ObjectOperatorIndentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/ObjectOperatorIndentSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_ObjectOperatorSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/ObjectOperatorSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_OpenBracketSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/OpenBracketSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_OperatorSpacingSniff">
+      <efferent>
+        <type namespace="+global" name="Squiz_Sniffs_WhiteSpace_OperatorSpacingSniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/OperatorSpacingSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_ScopeClosingBraceSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/ScopeClosingBraceSniff.php"/>
+    </class>
+    <class name="Drupal_Sniffs_WhiteSpace_ScopeIndentSniff">
+      <efferent>
+        <type namespace="+global" name="PHP_CodeSniffer_Sniff"/>
+        <type namespace="+global" name="PHP_CodeSniffer_Tokens"/>
+        <type namespace="+global" name="PHP_CodeSniffer_File"/>
+      </efferent>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/coder/coder_sniffer/Drupal/Sniffs/WhiteSpace/ScopeIndentSniff.php"/>
+    </class>
+  </package>
+  <package name="Krumo">
+    <class name="krumo">
+      <efferent/>
+      <afferent/>
+      <file name="/repo/sites/all/modules/contrib/devel/krumo/class.krumo.php"/>
+    </class>
+  </package>
+</dependencies>

@@ -1,0 +1,20 @@
+FROM debian
+
+RUN apt-get -y update
+RUN apt-get -y install shellcheck
+
+COPY . /myscript
+
+# Excluding SC2034 because we do a lot of sourcing, and we are using a version
+# of shellcheck which does not deal correctly with sourcing. Trying to install
+# a newer version with Cabal (https://github.com/koalaman/shellcheck/issues/670)
+# always yields out of memory, and apt-get installs an older version (see
+# https://github.com/koalaman/shellcheck/issues/704), which causes variables
+# which are used in sourced files to appear unused (SC2034, see
+# https://github.com/koalaman/shellcheck/issues/121)
+# Excluding SC2015 because x && y || z works for our purposes.
+RUN shellcheck -V
+RUN set -e && cd /myscript && for i in $(find ./core -type f -name '*.sh'); do shellcheck --exclude=SC2034,SC2015 "$i"; done
+RUN set -e && cd /myscript && for i in $(find ./tests -type f -name '*.sh'); do shellcheck --exclude=SC2034,SC2015 "$i"; done
+RUN set -e && cd /myscript && for i in $(find ./script -type f -name '*.sh'); do shellcheck --exclude=SC2034,SC2015 "$i"; done
+RUN set -e && cd /myscript && shellcheck --exclude=SC2034,SC2015 *.sh
