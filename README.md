@@ -44,3 +44,8 @@ Updating dcBase in your script
     git pull origin master
     cd ../
     git commit -am 'Updated dcBase'
+
+Automated tests
+-----
+
+Automated tests are run on TravisCI.
