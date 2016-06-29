@@ -9,6 +9,11 @@
 
 dcBase is a bash script framework.
 
+Requirements
+-----
+
+ * Docker (recommended)
+
 Making a new script
 -----
 
@@ -26,9 +31,11 @@ Usage
     cd /path/to/my-script
     ./example-script.sh
     ./example-script.sh usage
+    ./example-script.sh help say-hello-world
     ./example-script.sh say-hello-world
     ./example-script.sh say-hello-world --type=caps
     ./example-script.sh say-hello-world --type=caps --simulation-mode=true
+    ./example-script.sh self-test #Requires Docker for linting
 
 Updating dcBase in your script
 -----
