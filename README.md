@@ -7,9 +7,9 @@
         \____/_/ \_____\/ \_______\/ \__\/\__\/ \_____\/ \_____\/
 
 
-dcBase is a bash script framework sponsored.
+dcBase is a bash script framework.
 
-Installation
+Making a new script
 -----
 
     mkdir -p /path/to/my-script
@@ -19,6 +19,16 @@ Installation
     cp -r core/examples/example-001/* .
     git add .
     git commit -am 'Initial commit'
+
+Usage
+-----
+
+    cd /path/to/my-script
+    ./example-script.sh
+    ./example-script.sh usage
+    ./example-script.sh say-hello-world
+    ./example-script.sh say-hello-world --type=caps
+    ./example-script.sh say-hello-world --type=caps --simulation-mode=true
 
 Updating dcBase in your script
 -----
