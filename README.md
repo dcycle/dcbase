@@ -48,4 +48,6 @@ Updating dcBase in your script
 Automated tests
 -----
 
-Automated tests are run on TravisCI.
+Automated tests are run on [TravisCI](https://travis-ci.org/alberto56/dcbase).
+
+[![Build Status](https://travis-ci.org/alberto56/dcbase.svg?branch=master)](https://travis-ci.org/alberto56/dcbase)
