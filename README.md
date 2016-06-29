@@ -13,4 +13,17 @@ Installation
 -----
 
     mkdir -p /path/to/my-script
-    cd
+    cd /path/to/my-script
+    git init
+    git submodule add ../dcbase/core/ core
+    cp -r core/examples/example-001/* .
+    git add .
+    git commit -am 'Initial commit'
+
+Updating dcBase in your script
+-----
+
+    cd /path/to/my-script/core
+    git pull origin master
+    cd ../
+    git commit -am 'Updated dcBase'
