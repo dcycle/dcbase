@@ -38,6 +38,14 @@ else
   GlobalRUNID="$RANDOM$RANDOM$RANDOM"
 fi
 
+if [ ! -f "$GlobalSCRIPTDIR"/core/modules/structure/scripts/main.sh ]; then
+  echo -e 'Please make sure you run:'
+  echo -e ''
+  echo -e '    git submodule init'
+  echo -e '    git submodule update'
+  exit 1
+fi
+
 # Call the core/modules/structure/scripts/main script, or the mock equivalent, passing it what we know so
 # far about the call, in addition to any parameters passed by the user.
 "$GlobalSCRIPTDIR"/core/modules/structure/scripts/main.sh \
