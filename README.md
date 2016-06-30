@@ -20,7 +20,7 @@ Making a new script
     mkdir -p /path/to/my-script
     cd /path/to/my-script
     git init
-    git submodule add ../dcbase/core/ core
+    git submodule add https://github.com/alberto56/dcbase.git core
     cp -r core/examples/example-001/* .
     git add .
     git commit -am 'Initial commit'
