@@ -7,12 +7,20 @@ echo -e ""
 echo -e "Available global arguments:"
 echo -e "-----"
 echo -e ""
-head -n 1 "$GlobalSCRIPTDIR"/core/modules/*/arguments/*/README.md | grep -v == | grep -v '^$'
-head -n 1 "$GlobalSCRIPTDIR"/script/modules/*/arguments/*/README.md | grep -v == | grep -v '^$'
+if [ -f "$GlobalSCRIPTDIR"/core/modules/*/arguments/*/README.md ]; then
+  head -n 1 "$GlobalSCRIPTDIR"/core/modules/*/arguments/*/README.md | grep -v == | grep -v '^$'
+fi
+if [ -f "$GlobalSCRIPTDIR"/script/modules/*/arguments/*/README.md ]; then
+  head -n 1 "$GlobalSCRIPTDIR"/script/modules/*/arguments/*/README.md | grep -v == | grep -v '^$'
+fi
 echo -e ""
 echo -e "Available commands:"
 echo -e "-----"
 echo -e ""
-head -n 1 "$GlobalSCRIPTDIR"/core/modules/*/commands/*/README.md | grep -v == | grep -v '^$'
-head -n 1 "$GlobalSCRIPTDIR"/script/modules/*/commands/*/README.md | grep -v == | grep -v '^$'
+if [ -f "$GlobalSCRIPTDIR"/core/modules/*/commands/*/README.md ]; then
+  head -n 1 "$GlobalSCRIPTDIR"/core/modules/*/commands/*/README.md | grep -v == | grep -v '^$'
+fi
+if [ -f "$GlobalSCRIPTDIR"/script/modules/*/commands/*/README.md ]; then
+  head -n 1 "$GlobalSCRIPTDIR"/script/modules/*/commands/*/README.md | grep -v == | grep -v '^$'
+fi
 echo -e ""

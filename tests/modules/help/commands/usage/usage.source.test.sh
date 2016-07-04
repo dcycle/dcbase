@@ -19,4 +19,10 @@ source "$BASE"/core/modules/testing/scripts/assert-not.source.sh
 NEEDLE='SCRIPT COMMAND'
 source "$BASE"/core/modules/testing/scripts/assert.source.sh
 
+GlobalSCRIPTDIR="$BASE"/core/tests/modules/help/commands/usage/usage.source.test/does/not/exist
+HAYSTACK=$(source "$BASE"/core/modules/help/commands/usage/usage.source.sh 2>&1)
+NEEDLE='cannot open'
+MESSAGE='Do not fail if documentation not found'
+source "$BASE"/core/modules/testing/scripts/assert-not.source.sh
+
 source ./core/modules/testing/scripts/cleanup.source.sh
