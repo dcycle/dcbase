@@ -1,6 +1,6 @@
 set -e
 BASE=$(pwd)
-cd "$BASE"/examples/example-001 && mkdir core
+cd "$BASE"/examples/example-001 && rm -rf core && mkdir -p core
 cp -r "$BASE"/modules "$BASE"/examples/example-001/core/modules
 cp -r "$BASE"/tests "$BASE"/examples/example-001/core/tests
 cp -r "$BASE"/README.md "$BASE"/examples/example-001/core/README.md
