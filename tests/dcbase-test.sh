@@ -1,3 +1,4 @@
+set -e
 BASE=$(pwd)
 cd "$BASE"/examples/example-001 && mkdir core
 cp -r "$BASE"/modules "$BASE"/examples/example-001/core/modules
