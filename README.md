@@ -20,7 +20,7 @@ Making a new script
     mkdir -p /path/to/my-script
     cd /path/to/my-script
     git init
-    git submodule add https://github.com/alberto56/dcbase.git core
+    git submodule add https://github.com/dcycle/dcbase.git core
     cp -r core/examples/example-001/* .
     git add .
     git commit -am 'Initial commit'
@@ -48,6 +48,6 @@ Updating dcBase in your script
 Automated tests
 -----
 
-Automated tests are run on [TravisCI](https://travis-ci.org/alberto56/dcbase).
+Automated tests are run on [TravisCI](https://travis-ci.org/dcycle/dcbase).
 
-[![Build Status](https://travis-ci.org/alberto56/dcbase.svg?branch=master)](https://travis-ci.org/alberto56/dcbase)
+[![Build Status](https://travis-ci.org/dcycle/dcbase.svg?branch=master)](https://travis-ci.org/dcycle/dcbase)
