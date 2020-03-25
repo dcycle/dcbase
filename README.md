@@ -1,7 +1,7 @@
 dcBase
 -----
 
-dcBase is a bash script framework.
+dcBase is a bash script framework starterkit.
 
 [![CircleCI](https://circleci.com/gh/dcycle/dcbase.svg?style=svg)](https://circleci.com/gh/dcycle/dcbase)
 
