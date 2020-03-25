@@ -9,4 +9,4 @@ jobs:
       - checkout
       - run:
           name: Tests
-          command: ./scripts/ci.sh
+          command: ./tests/ci.sh
