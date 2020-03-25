@@ -1,29 +1,17 @@
-     ______   ______    _______   ________   ______   ______
-    /_____/\ /_____/\ /_______/\ /_______/\ /_____/\ /_____/\
-    \:::_ \ \\:::__\/ \::: _  \ \\::: _  \ \\::::_\/_\::::_\/_
-     \:\ \ \ \\:\ \    \::(_)  \/_\::(_)  \ \\:\/___/\\:\/___/\
-      \:\ \ \ \\:\ \____\::  _  \ \\:: __  \ \\_::._\:\\::___\/_
-       \:\/.:| |\:\____/\\::(_)  \ \\:.\ \  \ \ /____\:\\:\____/\
-        \____/_/ \_____\/ \_______\/ \__\/\__\/ \_____\/ \_____\/
-
+dcBase
+-----
 
 dcBase is a bash script framework.
 
-Requirements
------
+[![CircleCI](https://circleci.com/gh/dcycle/dcbase.svg?style=svg)](https://circleci.com/gh/dcycle/dcbase)
 
- * Docker (recommended)
-
-Making a new script
------
-
-    mkdir -p /path/to/my-script
-    cd /path/to/my-script
-    git init
-    git submodule add https://github.com/dcycle/dcbase.git core
-    cp -r core/examples/example-001/* .
-    git add .
-    git commit -am 'Initial commit'
+ ______   ______    _______   ________   ______   ______
+/_____/\ /_____/\ /_______/\ /_______/\ /_____/\ /_____/\
+\:::_ \ \\:::__\/ \::: _  \ \\::: _  \ \\::::_\/_\::::_\/_
+ \:\ \ \ \\:\ \    \::(_)  \/_\::(_)  \ \\:\/___/\\:\/___/\
+  \:\ \ \ \\:\ \____\::  _  \ \\:: __  \ \\_::._\:\\::___\/_
+   \:\/.:| |\:\____/\\::(_)  \ \\:.\ \  \ \ /____\:\\:\____/\
+    \____/_/ \_____\/ \_______\/ \__\/\__\/ \_____\/ \_____\/
 
 Usage
 -----
@@ -35,19 +23,18 @@ Usage
     ./example-script.sh say-hello-world
     ./example-script.sh say-hello-world --type=caps
     ./example-script.sh say-hello-world --type=caps --simulation-mode=true
-    ./example-script.sh self-test #Requires Docker for linting
+    # Requires Docker for linting
+    ./example-script.sh self-test
 
-Updating dcBase in your script
+Defining commands with preflight and arguments
 -----
 
-    cd /path/to/my-script/core
-    git pull origin master
-    cd ../
-    git commit -am 'Updated dcBase'
+Commands are defined in modules. The included "my-module" defines the command "say-hello-world" through the contents of the following directory:
 
-Automated tests
------
+    ./script/modules/my-module/commands/say-hello-world
 
-Automated tests are run on [TravisCI](https://travis-ci.org/dcycle/dcbase).
+Script developers are encouragd to create their own modules as siblings of my-module by using the same structure as my-module. Modules can have any number of commands.
 
-[![Build Status](https://travis-ci.org/dcycle/dcbase.svg?branch=master)](https://travis-ci.org/dcycle/dcbase)
+Core commands such as self-test are defined within the ./core folder and script developers are encouraged to not modify these, or if they need to, file a ticket with https://github.com/dcycle/dcbase/issues. An example of a core command is:
+
+    ./core/modules/development/commands/self-test

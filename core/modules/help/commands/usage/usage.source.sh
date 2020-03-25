@@ -33,4 +33,3 @@ else
   echo -e "[no script-specific commands are defined]"
 fi
 echo -e ""
-echo "$GlobalSCRIPTDIR"/core/modules/core/scripts/glob-exists.sh
